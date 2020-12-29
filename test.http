@@ -39,3 +39,33 @@ delete http://localhost:8080/good/test
 # index-05
 ### 
 get http://localhost:8080/index/index
+
+
+# index-06
+### 
+get http://localhost:8080/query?a=1&b=2
+
+
+###
+POST http://localhost:8080/post HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+name=foo
+&password=bar
+
+
+### 
+
+POST http://localhost:8080/post HTTP/1.1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="text"
+
+title
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="1.png"
+Content-Type: image/png
+
+< ./1.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
