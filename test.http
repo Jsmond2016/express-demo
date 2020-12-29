@@ -1,0 +1,41 @@
+# 使用参考 https://zhuanlan.zhihu.com/p/54266685
+# 使用参考 https://blog.csdn.net/weixin_36242811/article/details/108611523
+
+# demo-01
+get http://localhost:8080/get
+
+# demo-02
+
+###
+get http://localhost:8080/test
+
+###
+post http://localhost:8080/test
+
+### 
+delete http://localhost:8080/test
+
+
+# demo-04
+
+###
+get http://localhost:8080/user/test
+
+###
+post http://localhost:8080/user/test
+
+### 
+delete http://localhost:8080/user/test
+
+###
+get http://localhost:8080/good/test
+
+###
+post http://localhost:8080/good/test
+
+### 
+delete http://localhost:8080/good/test
+
+# index-05
+### 
+get http://localhost:8080/index/index
