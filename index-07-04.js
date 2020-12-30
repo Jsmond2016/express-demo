@@ -6,7 +6,7 @@
  * 
  * 学习视频：https://www.bilibili.com/video/BV1xa4y1p7uu?p=11
  * 
- * 具体参考文件：/08/index.html，使用 hs 启动
+ * 具体参考文件：/07-02/index.html，使用 hs 启动
  * 
  *  文件上传--单文件上传版本
  * 
