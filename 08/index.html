@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <!-- 单文件版本 -->
+    <!-- <input name="file" type="file"> -->
+    <!-- 多文件版本 -->
+    <input name="avatar" type="file" multiple>
+    <input name="photo" type="file">
+    <button>提交</button>
+  </form>
+
+  <script>
+    const form = document.querySelector('form')
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
+
+      // 拿到文件
+      const formData = new FormData(form)
+      for(let value of formData) {
+        console.log('value', value)
+      }
+      // 发送
+      const xhr = new XMLHttpRequest()
+      xhr.open('POST', 'http://localhost:8888/upload')
+      // 不需要设置 请求头，因为 form 会自动设置请求头
+      xhr.send(formData)
+
+      xhr.onload = function () {
+
+      }
+
+    })
+  </script>
+
+
+</body>
+</html>
