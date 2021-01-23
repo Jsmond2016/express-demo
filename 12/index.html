@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>登录页</h1>
+
+  <br>
+  <button>click me</button>
+
+  <br>
+
+  <a href="./userInfo.html">跳转 userInfo </a>
+
+  <script>
+    const btn = document.querySelector('button')
+    btn.onclick = function() {
+      const url = 'http://localhost:8081/login'
+      window.fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          username: 'tst',
+          age: 18
+        }),
+        // mode: 'cors'
+      }).then(res => res.json()).then(res => {
+        console.log(res)
+        window.sessionStorage.setItem('token', res.token)
+      })
+    }
+</script>
+</body>
+</html>
