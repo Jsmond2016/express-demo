@@ -83,3 +83,19 @@ name=foo
 
 ###
 GET http://localhost:8090/get-info?name=foo HTTP/1.1
+
+
+### my-test
+GET http://localhost:8080/test HTTP/1.1
+Cookie: a=1;b=2
+
+### my-test
+POST http://localhost:8080/post HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+
+### my-test-index2.js
+POST http://localhost:8080/set-session HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+name="hello"&password="123"
