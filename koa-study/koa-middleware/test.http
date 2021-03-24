@@ -1,0 +1,20 @@
+
+### 01
+GET http://localhost:3000/
+
+### 02-koa-router
+
+GET http://localhost:3000/
+
+### 03
+
+http://localhost:3000/api/test1
+
+### 03
+http://localhost:3000/api/test2
+
+### 04
+http://localhost:3000/home/one
+
+### 04
+http://localhost:3000/page/one
